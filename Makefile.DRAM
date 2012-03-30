@@ -1,0 +1,61 @@
+all: lib benchmark64
+
+LIBPATH=-L"/home/hendrix/browser_startup_time_ln/nonbrowser_mode"
+
+
+benchmark64: benchstringio.o fasta_10k_ref_output.o hash_map.o oswego_malloc.o nvmalloc_wrap.o fasta.o nv_map.o deltablue.o revcomp.o knucleotide.o procstat.o richards.o
+	g++ -g bench-framework.c -o bench-framework benchstringio.o fasta_10k_ref_output.o hash_map.o nvmalloc_wrap.o fasta.o nv_map.o deltablue.o \
+	revcomp.o knucleotide.o procstat.o richards.o ${LIBPATH}  -loswego  -lm -lpthread
+
+benchstringio.o: benchstringio.c
+	gcc -c benchstringio.c -std=gnu99 -lm
+
+fasta_10k_ref_output.o:fasta_10k_ref_output.c
+	gcc -c -g fasta_10k_ref_output.c -std=gnu99
+hash_map.o : hash_map.cc
+	g++ -c -g hash_map.cc
+
+nvmalloc_wrap.o: nvmalloc_wrap.c
+	gcc -c -g nvmalloc_wrap.c ${LIBPATH} -loswego  -std=gnu99
+
+revcomp.o: revcomp.c
+	gcc -c -g revcomp.c -std=gnu99 -lpthread
+
+procstat.o: procstat.c
+	gcc -c -g procstat.c -std=gnu99 
+
+fasta.o: fasta.c
+	gcc -c -g fasta.c -std=gnu99
+
+deltablue.o: deltablue.c
+	 gcc -c -g deltablue.c nvmalloc_wrap.o -std=gnu99
+
+richards.o: richards.c
+	 gcc -c -g richards.c nvmalloc_wrap.o -std=gnu99
+
+
+nv_map.o: nv_map.c
+	gcc -c -g nv_map.c 
+
+lib: oswego_malloc.c
+	#gcc -c -g oswego_malloc.c
+	gcc -Wall -fPIC -c oswego_malloc.c
+	gcc -shared -Wl,-soname,liboswego.so.1 -o liboswego.so.1.0   oswego_malloc.o
+	cp liboswego.so.1.0 liboswego.so
+	cp liboswego.so.1.0 liboswego.so.1
+	sudo cp liboswego.so* /usr/lib
+
+knucleotide.o: knucleotide.c
+	gcc -c -g knucleotide.c -std=gnu99
+
+clean:
+	rm -rf *.o
+	rm -rf benchmark64
+	rm -rf bench-framework
+	rm -rf *.a
+	rm -rf *.so
+	rm -rf *.so.*
+	 sudo rm -rf /usr/lib/liboswego*
+
+
+

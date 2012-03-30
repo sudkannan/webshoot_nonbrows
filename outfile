@@ -1,0 +1,4641 @@
+before arrayfile_fopen 
+4 benchmarks registered
+Running Richards
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 16871424 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17006592 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 17141760 
+usec_per_run 2203.488987
+Running Fasta
+Write time 20344  
+Read time 3502  
+Write size 6100154 
+Read size 6100154 
+avg_mem_usg 23248896 
+Write time 10400  
+Read time 1741  
+Write size 3050077 
+Read size 3050077 
+avg_mem_usg 26300416 
+Write time 10429  
+Read time 1755  
+Write size 3050077 
+Read size 3050077 
+avg_mem_usg 29351936 
+Write time 10534  
+Read time 1781  
+Write size 3050077 
+Read size 3050077 
+avg_mem_usg 32403456 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 32399360 
+usec_per_run 813490.750000
+Running Revcomp
+Write time 3790  
+Read time 19063  
+Write size 6100154 
+Read size 12200310 
+avg_mem_usg 88961024 
+Write time 1888  
+Read time 9100  
+Write size 3050077 
+Read size 6100155 
+avg_mem_usg 90484736 
+Write time 1868  
+Read time 9078  
+Write size 3050077 
+Read size 6100155 
+avg_mem_usg 90484736 
+Write time 1872  
+Read time 9023  
+Write size 3050077 
+Read size 6100155 
+avg_mem_usg 90484736 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 73695232 
+usec_per_run 661877.250000
+Running Knucleotide
+Write time 0  
+Read time 15475  
+Write size 0 
+Read size 6100156 
+avg_mem_usg 126803968 
+Write time 0  
+Read time 7980  
+Write size 0 
+Read size 3050078 
+avg_mem_usg 164450304 
+Write time 0  
+Read time 7218  
+Write size 0 
+Read size 3050078 
+avg_mem_usg 193806336 
+Write time 0  
+Read time 7311  
+Write size 0 
+Read size 3050078 
+avg_mem_usg 164450304 
+Write time 0  
+Read time 0  
+Write size 0 
+Read size 0 
+avg_mem_usg 164446208 
+usec_per_run 1304264.750000
+Benchmark Richards: usec 1000384, iters 454, usec/run 2203 score 113422.71 runs 454
+Benchmark Fasta: usec 3253963, iters 4, usec/run 813490 score 6351.32 runs 4
+Benchmark Revcomp: usec 2647509, iters 4, usec/run 661877 score 3556.98 runs 4
+Benchmark Knucleotide: usec 5217059, iters 4, usec/run 1304264 score 33267.26 runs 4
+Aggregate score: 17086
+               stime: 5.960000
