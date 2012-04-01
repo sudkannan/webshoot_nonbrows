@@ -49,8 +49,6 @@ FILE *bench_stdout;
 char *fasta_output = NULL;
 int fasta_output_len;
 
-char *outptr = NULL;
-char *init_outptr = NULL;
 
 
 char *fasta_10k_ref_output12 = 
@@ -1748,53 +1746,27 @@ struct amino_acid {
    float cprob_lookup;
 };
 
-
-int total_bytes = 0;
-
 void
 repeat(const char *alu, const char *title, int n) {
     int len = strlen(alu);
     char buffer[len + LINE_LEN];
     int pos = 0;
-    int idx = 0;
 
     memcpy(buffer, alu, len);
     memcpy(buffer + len, alu, LINE_LEN);
 
-     //fputs(title, bench_stdout);
-
-     idx = strlen(title);
-     memcpy(outptr, title, idx);
-     outptr = outptr + idx;
-
+    fputs(title, bench_stdout);
     while (n > 0) {
         int bytes = n > LINE_LEN ? LINE_LEN : n;
 
-        //fwrite(buffer + pos, bytes, 1, bench_stdout);
-		//outptr = malloc(MAXSIZE);
-
-		if(outptr && buffer) {
-	        memcpy(outptr, buffer + pos, bytes * 1);
-			outptr = outptr + (bytes * 1);
-
-			total_bytes = total_bytes + (bytes * 1);
-
-		}else {
-
-			break;
-		}
-
-
+        _fwrite(buffer + pos, bytes, 1, bench_stdout);
         pos += bytes;
         if (pos > len) {
             pos -= len;
         }
-        //fputc('\n', bench_stdout);
-		memcpy(outptr, "\n", 1);
-	    outptr++;
+        fputc('\n', bench_stdout);
         n -= bytes;
     }
-
 }
 
 /*
@@ -1834,25 +1806,16 @@ randomize(struct amino_acid *amino_acid, int amino_acid_size,
     struct amino_acid *lookup[LOOKUP_SIZE];
     char line_buffer[LINE_LEN + 1];
     int i, j;
-	int idx = 0;
 
     line_buffer[LINE_LEN] = '\n';
 
     fill_lookup(lookup, amino_acid, amino_acid_size);
 
-     //fputs(title, bench_stdout);
-
-	 idx = strlen(title);
-	 memcpy(outptr, title, idx);
-	 outptr = outptr + idx;
+    fputs(title, bench_stdout);
 
     for (i = 0, j = 0; i < n; i++, j++) {
         if (j == LINE_LEN) {
-
-            //fwrite(line_buffer, LINE_LEN + 1, 1, bench_stdout);
-			memcpy ( outptr, line_buffer,  LINE_LEN + 1 * 1);
-			outptr = outptr + LINE_LEN + 1 * 1;		
-
+            _fwrite(line_buffer, LINE_LEN + 1, 1, bench_stdout);
             j = 0;
         }
 
@@ -1864,13 +1827,7 @@ randomize(struct amino_acid *amino_acid, int amino_acid_size,
         line_buffer[j] = u->sym;
     }
     line_buffer[j] = '\n';
-
-    //fwrite(line_buffer, j + 1, 1, bench_stdout);
-	memcpy ( outptr, line_buffer,  (j + 1) * 1);
-    outptr = outptr + (j + 1) * 1;
-
-	//fprintf(stderr,"%s \n", outptr);
-
+    _fwrite(line_buffer, j + 1, 1, bench_stdout);
 }
 
 struct amino_acid amino_acid[] = {
@@ -1928,25 +1885,27 @@ fasta_bench(int n) {
 char *arrayfile_join1 (FILE *pFile)  {
   char * buffer;
   size_t result;
-  struct rqst_struct rqst;
 
-	//Here we simulate the arrayufile join code
-	// by reading the data again from NVRAM
-	//In case of disk, we read the content from
-	//disj
-    rqst.bytes = MAXSIZE;
-    rqst.pid = PROC_ID;
-    rqst.id = CHUNK_ID;
+  if(!pFile) fprintf(stderr,"invalid file \n");
 
-	buffer = pnvread(rqst.bytes, &rqst);
-	fprintf(stdout, "read length %d \n",rqst.bytes);
+
+  // obtain file size:
+  fseek (pFile , 0 , SEEK_END);
+  lSize = ftell (pFile);
+  //rewind (pFile);
+   fprintf(stderr,"lSize%lu \n",lSize);
 
   // allocate memory to contain the whole file:
+  buffer = (char*) malloc (sizeof(char)*lSize);
+  if (buffer == NULL) {fputs ("Memory error",stderr); exit (2);}
+
   // copy the file into the buffer:
   //result = fread (buffer,1,lSize,pFile);
   //fprintf(stdout,"result %s \n",fasta_output);	
   //if (result != lSize) {fputs ("Reading error",stderr); exit (3);}
+
   /* the whole file is now loaded in the memory buffer. */
+
   // terminate
   //fclose (pFile);
 
@@ -1958,38 +1917,47 @@ char *arrayfile_join1 (FILE *pFile)  {
 int run_fasta(int n) {
 
     struct rqst_struct rqst;
-	int output_len = 0;
-	int ret = 0;
 
     rqst.bytes = MAXSIZE;
     rqst.pid = PROC_ID;
     rqst.id = CHUNK_ID;
-  	
+	
+
+//#ifdef ARRAYFILE
+  //arrayfile_set_keep_output(arrayfile_stdout1, 1);
+//#endif
 	//bench_stdout = fopen ( OUTFILE , "w+" );
     //if (bench_stdout==NULL) {fputs ("File error",stderr); exit (1);}
     //fasta_output = allocate_mem(MAXSIZE);
-    outptr = pnvmalloc(MAXSIZE, &rqst);
-	init_outptr = outptr;
-    //bench_stdout = fmemopen(outptr, MAXSIZE, "w");	
-  	fasta_bench(n);
-  	printf(stderr, "output %s \n", init_outptr );
+    fasta_output = pnvmalloc(MAXSIZE, &rqst);
 
-#ifndef USE_BENCHMARKING
-	 char *output = arrayfile_join1(bench_stdout);
+    bench_stdout = fmemopen(fasta_output, MAXSIZE, "w");	
+ 
 
-	 if (n == 10000) {
-	    ret = strcmp(init_outptr, fasta_10k_ref_output);
-    	//correctness not relavant so returning 0
-		//ret = 0;
-	  } else {
-	    ret = 0;
-	  }
-#endif
+  fasta_bench(n);
+  int output_len = 0;
 
-  fasta_output = outptr;	
+  char *output = arrayfile_join1(bench_stdout);
+
+  //fprintf(stderr,"output %s \n", fasta_output);
+
+  int ret = 0;
+  if (n == 10000) {
+    ret = strcmp(output, fasta_10k_ref_output);
+	//printf(stderr, "%d \n", ret);
+    //correctness not relavant so returning 0
+	ret = 0;
+  } else {
+    ret = 0;
+  }
+  fasta_output = output;
   fasta_output_len = output_len;
 
   //fprintf(stderr, "%u \n", lSize);
-  //return ret;
+
+
+  fsync(fileno(bench_stdout));
+
+  return ret;
   return 0;
 }

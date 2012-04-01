@@ -10,7 +10,7 @@ extern "C" {
 
 #define PROC_ID 994
 #define CHUNK_ID 1
-#define MAXSIZE 10 * 1024 * 1024
+#define MAXSIZE 200* 1024 * 1024
 
 #define FASTA_DELETE_ME
 

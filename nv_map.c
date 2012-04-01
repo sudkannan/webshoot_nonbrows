@@ -8,15 +8,18 @@
 #include "nv_map.h"
 #include "list.h"
 #include <sys/mman.h>
-#include <strings.h>
+//Native client does not have strings.h
+//#include <strings.h>
 #include <time.h>
 #include "nv_def.h"
 #include <inttypes.h>
+//#include <sys/nacl_imc_api.h>
+//#include <sys/nacl_syscalls.h>
 
 
-#define NV_DEBUG
+//#define NV_DEBUG
 int dummy_var = 0;
-static int vma_id;
+//static int vma_id;
 /*List containing all project id's */
 static struct list_head proc_objlist;
 /*intial process obj list var*/
@@ -24,9 +27,9 @@ int proc_list_init = 0;
 /*fd for file which contains process obj map*/
 static int proc_map;
 unsigned long proc_map_start;
-int g_file_desc = -1;
+int g_file_desc_nv = -1;
 //void *map = NULL;
-unsigned long tot_bytes =0 ;
+//unsigned long tot_bytes =0 ;
 struct nvmap_arg_struct nvarg;
 
 
@@ -55,7 +58,7 @@ static struct chunk* create_chunk_obj(struct rqst_struct *rqst, unsigned long cu
 	//Meta offset indicates offset with respect to metadata
 	addr = addr + proc_obj->meta_offset;
 #ifdef NV_DEBUG
-	fprintf(stderr, "addr %lu  sizeof(chunk) %lu proc_obj->meta_offset %lu \n", addr, sizeof(struct chunk), proc_obj->meta_offset);
+	//fprintf(stderr, "addr %lu  sizeof(chunk) %u proc_obj->meta_offset %u \n", addr, sizeof(struct chunk), proc_obj->meta_offset);
 #endif
 	chunk = (struct chunk*) addr;
 	proc_obj->meta_offset += sizeof(struct chunk);
@@ -81,14 +84,14 @@ static struct chunk* create_chunk_obj(struct rqst_struct *rqst, unsigned long cu
 #endif
 
 #ifdef NV_DEBUG
-	fprintf(stderr, "Setting offset chunk->vma_id %u to %lu  %u\n",chunk->vma_id, chunk->offset, proc_obj->meta_offset);
+	//fprintf(stderr, "Setting offset chunk->vma_id %u to %u  %u\n",chunk->vma_id, chunk->offset, proc_obj->meta_offset);
 #endif
 	//current offset of process
 	return chunk;
 }
 
 
- int  setup_map_file(char *filepath, unsigned long bytes)
+ int  setup_map_file_nv(char *filepath, unsigned long bytes)
  {
 	int result;
         int fd; 
@@ -245,8 +248,10 @@ static struct proc_obj * create_proc_obj(int pid) {
      
       bzero(file_name, 256);
       generate_file_name(MAPMETADATA_PATH, pid, file_name);
+#ifdef NV_DEBUG
 	  fprintf(stderr, "%s metadata file name   \n",file_name);	
-      proc_map = setup_map_file(file_name, METADATA_MAP_SIZE);
+#endif
+      proc_map = setup_map_file_nv(file_name, METADATA_MAP_SIZE);
       if (proc_map < 1) {
           printf("failed to create a map\n");
           return NULL;
@@ -343,7 +348,9 @@ static int add_to_process_chunk(struct proc_obj *proc_obj, struct rqst_struct *r
 			 //update the process with number of mmap blocks
             if(chunk->mmap_id > proc_obj->num_mmaps) {
                 proc_obj->num_mmaps = chunk->mmap_id;
+#ifdef NV_DEBUG
 				fprintf(stderr,"updating process mmap num\n");
+#endif
             }	
 #ifdef NV_DEBUG
 		print_chunk(chunk);
@@ -452,13 +459,12 @@ void* nv_mmap(struct rqst_struct *rqst) {
 	//void *map; /* mmapped array of int's */
 	int pid = -1;
 	struct proc_obj *proc_obj=NULL;
-	unsigned long offset =0;
 	ULONG bytes = 0;
 	char *var = NULL;
 	char file_name[256];
 #ifdef NV_DEBUG
-    uintptr_t uptrmap;
-    uint32_t  int32map;
+    //uintptr_t uptrmap;
+    //uint32_t  int32map;
 
     fprintf(stderr,"Entering nv_mmap \n");
 #endif
@@ -472,10 +478,13 @@ void* nv_mmap(struct rqst_struct *rqst) {
 	bytes = rqst->bytes;
 	var = (char *)rqst->var;
 	pid = rqst->pid;
+    
 
     proc_obj = find_proc_obj(pid);
 	if(proc_obj) {
+#ifdef NV_DEBUG
 		fprintf(stderr,"process already exists \n");
+#endif
 		proc_map_start = (unsigned long)proc_obj;
 	}
    /*if(!proc_obj) {
@@ -523,8 +532,8 @@ void* nv_mmap(struct rqst_struct *rqst) {
 #endif
 		/*FIX ME: Something wrong*/
 		generate_file_name((char *) FILEPATH, rqst->pid, file_name);
-		g_file_desc = setup_map_file(file_name, MAX_DATA_SIZE);
-        proc_obj->file_desc = g_file_desc;
+		g_file_desc_nv = setup_map_file_nv(file_name, MAX_DATA_SIZE);
+        proc_obj->file_desc = g_file_desc_nv;
 	}
 
 #ifdef NV_DEBUG
@@ -544,40 +553,59 @@ void* nv_mmap(struct rqst_struct *rqst) {
 	return (void *)0;
 }
 
+int nv_data_commit(struct rqst_struct *rqst) {
 
+	int pid = -1;
+	size_t size = 0;
+	struct proc_obj *proc_obj= NULL;   
+    unsigned int vma_id;
+	unsigned long wr_addr = 0;
+	int result = 0;
+	 unsigned long addr =0;
 
-/*Function to copy chunks */
-static int chunk_copy(struct chunk *dest, struct chunk *src){ 
+	if(!rqst)
+		return -1;
 
-	if(!dest ) {
-		printf("chunk_copy:dest is null \n");
-		goto null_err;
-	}
+	pid = rqst->pid;
+	proc_obj= (struct proc_obj *) find_proc_obj(pid);
 
-	if(!src ) {
-		printf("chunk_copy:src is null \n");
-		goto null_err;
-	}
-
-	//TODO: this is not a great way to copy structures
-	dest->vma_id = src->vma_id;
-	dest->length = src->length;
-	dest->proc_id = src->proc_id;
-	dest->offset = src->offset;
-    //print_chunk(dest);
-    
-        
-#ifdef CHCKPT_HPC
-	//FIXME:operations should be structure
-	// BUT how to map them
-    dest->order_id = src->order_id;  
-	dest->ops = src->ops;
+#ifdef NV_DEBUG
+		fprintf(stderr, "nv_commit: finding chunk \n");
 #endif
+	 /*find the chunkif application has supplied request id, neglect*/
+     vma_id = rqst->id;
+ 
+	struct chunk *chunk = find_chunk(vma_id, proc_obj); 
+	if(!chunk) {
+		printf("nv_commit:finding chunk failed \n");
+		goto error;
+	}
 
-	return 0;
+	/*set the commit flag*/
+	chunk->isCommitted = 1;
 
-	null_err:
-	return -1;	
+	/*get the current starting virtual address of chunk
+	and flush it*/
+	wr_addr = (unsigned long)rqst->mem;
+    size = rqst->bytes;
+
+	addr = wr_addr;
+	//imc_nvram_obj_create(addr, addr);
+#ifdef NV_DEBUG
+	fprintf(stdout,"nv_map.c:before calling nvcommit \n");
+#endif
+    //result = nvcommit(addr, size);
+	
+    if(result) {
+		fprintf(stdout,"nv_map.c:flush result %d \n",result);
+		return -1;
+    }
+
+
+	return result;
+
+error:
+	return -1;
 }
 
 
@@ -585,9 +613,9 @@ static int chunk_copy(struct chunk *dest, struct chunk *src){
 void print_chunk(struct chunk *chunk) {
 
      fprintf(stderr,"chunk: vma_id %u\n", chunk->vma_id);
-     fprintf(stderr,"chunk: length %ld\n",  chunk->length);
+     fprintf(stderr,"chunk: length %u\n",  chunk->length);
      fprintf(stderr,"chunk: proc_id %d\n", chunk->proc_id); 
-     fprintf(stderr,"chunk: offset %ld\n", chunk->offset); 
+     fprintf(stderr,"chunk: offset %u\n", chunk->offset); 
 	 fprintf(stderr,"chunk: mmap id %u \n", chunk->mmap_id);
 #ifdef CHCKPT_HPC
      fprintf(stderr,"chunk: order_id %ld\n",chunk->order_id);
@@ -596,233 +624,7 @@ void print_chunk(struct chunk *chunk) {
 
 
 
-/*Function to update the queue/log
-Called by holding spin lock
-avoid calling to function recursively*/
-int update_queue(struct queue *l_queue, struct chunk *chunk) {
 
-	unsigned long addr=0;
-	struct chunk *l_chunk = NULL;
-
-	//update the log
-	if(!l_queue){
-		printf("l_queue is null\n");
-		goto error;
-	}
-
-	l_queue->num_chunks++;
-
-	//Get the offset to write 
-	//add it to the starting address
-	addr = (unsigned long)l_queue  + l_queue->offset;
-	l_chunk = (struct chunk *)addr;
-
-	//intialize a new chunk
-	//FIXME: do we need two copies of chunk, one?
-	//in process metadata and another here
-	if (chunk_copy(	l_chunk, chunk ) == -1){
-		printf("chunk copy failed \n");
-		goto error;
-	}
-
-	//update queue offset
-	l_queue->offset += sizeof(struct chunk);
-
-#ifdef NV_DEBUG
-    print_chunk(l_chunk);
-#endif
-
-	//testing purpose
-	/*iterate through the process object list to locate the object*/
-	//list_for_each(pos, &l_queue->lchunk_list) {
-
- /*    addr = (unsigned long)l_queue;
-     addr = addr + sizeof(struct queue);      
-     for (index =0; index  < l_queue->num_chunks; index++) {
-        temp  = (struct chunk *)addr;
-        addr +=  sizeof(struct chunk);
-			if (temp) {
-#ifdef NV_DEBUG
-			fprintf(stderr,"update_queue: chunk->vma_id %d\n", temp->vma_id);
-#endif	
-			}
-    }*/
-	return 0;
-
-	error:
-	return -1;
-}
-
-void* create_queue() {
-
-        key_t key;
-        int shmid;
-        void *shm;
-
-        key = 2078;
-
-        fprintf(stderr,"creating queue of size %d\n", SHMSZ);
-
-        if ((shmid = shmget(key,SHMSZ, 0666 | IPC_CREAT)) < 0) {
-                //perror("shmget");
-                return NULL;
-        }
-
-        if ((shm = shmat(shmid, (void *)0, 0)) == (void *)-1) {
-                //perror("shmat");
-                return NULL;
-        }
-
-        /*queue already exists*/
-        return shm;
-}
-
-
-
-void* check_if_init() {
-
-	key_t key;
-	int shmid;
-	void *shm;
-
-	key = 2078;
-
-	/*fd = open("test", O_RDWR);
-
-	if (fd == -1) {
-		perror("Error opening file for reading");
-		return NULL;
-	}*/
-
-	if ((shmid = shmget(key, SHMSZ, 0666)) < 0) {
-		perror("shmget");
-		return NULL;
-	}
-
-	if ((shm = shmat(shmid, (void *)0, 0)) == (void *)-1) {
-		perror("shmat");
-		return NULL;
-	}
-
-	/*queue already exists*/
-	return shm;
-}
-
-int nv_commit(struct rqst_struct *rqst) {
-
-	int process_id = -1;
-	unsigned long addr = 0;
-	int size = 0;
-	int ops = -1;
-	char *var = NULL;
-	void *src = NULL;
-	struct proc_obj *proc_obj= NULL;   
-    unsigned int vma_id = 0;
-    struct chunk *chunk_ptr= NULL;
-
-	if(!rqst)
-		return -1;
-
-	var = (char *)rqst->var;
-	size = rqst->bytes;
-	process_id = rqst->pid;
-	ops = rqst->ops;
-	src = rqst->src;
-	proc_obj= find_proc_obj(process_id);
-
-
-
-#ifdef NV_DEBUG
-		fprintf(stderr, "nv_commit: finding chunk \n");
-#endif
-	//find the chunk
-    //if application has supplied request id, neglect
-    if(!rqst->id) {
-      if(rqst->var) 
-	      vma_id = generate_vmaid((const char*)rqst->var);
-      else
-		printf("nv_commit:error generating vma id \n");
-    } 
-    else
-      vma_id = rqst->id;
- 
-	chunk_ptr = find_chunk( vma_id, proc_obj );
-	if(!chunk_ptr) {
-		printf("nv_commit:finding chunk failed %d \n", vma_id);
-		goto error;
-	}
-	chunk_ptr->length = rqst->bytes; 
-
-#ifdef CHCKPT_HPC
-	chunk_ptr->ops = ops;
-	chunk_ptr->order_id = rqst->order_id;
-#endif
-
-
-	if(!src){
-		printf( "nv_commit:dram src pointer is null \n");
-		goto error;
-	}
-
-	//found the chunk ptr
-	if (size <= 0 ) {
-		printf( "nv_commit:very few bytes to copy \n");
-		goto error;
-	}
-
-#ifdef NV_DEBUG
-	fprintf(stderr, "nv_commit:getting chunk start address \n");
-#endif
-
-	//get the chunk starting address
-	if ( !chunk_ptr ||  !(chunk_ptr->proc_obj)) {
-		printf("nv_commit: could not locate process obj or chunk\n");
-		goto error;
-	}
-
-    addr = rqst->mem;
-
-   //if(initialize_sema){
-	//    while(gt_decr_sema());
-  // }
-   memcpy((void *) addr, src, size);
-
-#ifdef NV_DEBUG
-    //fprintf(stderr, "addr %ld, src %ld size %ld \n", addr, src, size);
-#endif
-
-   /*if(initialize_sema){
-
-        gt_incr_sema();
-   }*/
-
-  /* if(!l_queue) {
-	l_queue = check_if_init();
-	if(!l_queue)
-    fprintf(stderr, "nv_commit:l_queue is null \n");
-   }*/	
- 
-  //fprintf(stderr, "nv_commit: before spin lock %d \n",l_queue->lock.locked);
-#ifdef ENABLE_LOCK
-	//gt_spin_lock(&l_queue->lock);
-#endif
-
-	update_queue(l_queue, chunk_ptr);
-
-#ifdef ENABLE_LOCK
-	 //gt_spin_unlock(&l_queue->lock);
-
-#endif
-
-#ifdef NV_DEBUG
-   printf("nv_commit: after spin lock %d \n",  chunk_ptr->proc_obj->pid); 
-#endif
-
-	return 0;
-
-	error:
-	return -1;
-}
 
 /*gives the offset from start address
  * @params: start_addr start address of process
@@ -848,7 +650,7 @@ ULONG findoffset(UINT proc_id, ULONG curr_addr) {
  * @params: offset
  * @return: 0 if success, -1 on failure
  */
-int update_offset(UINT proc_id, ULONG offset, struct rqst_struct *rqst) {
+int update_offset(UINT proc_id, unsigned int offset, struct rqst_struct *rqst) {
 
 	struct proc_obj *proc_obj;
 	struct chunk* chunk;
@@ -877,8 +679,9 @@ int update_offset(UINT proc_id, ULONG offset, struct rqst_struct *rqst) {
 		chunk = find_chunk(vma_id, proc_obj);
 
 		if (!chunk) {
-
-			fprintf(stderr,"rqst->mmap_id %d \n",rqst->mmap_id);
+#ifdef NV_DEBUG
+			fprintf(stderr,"rqst->mmap_id %d  offset %d \n",rqst->mmap_id, offset);
+#endif
 
 			//add a new chunk and update to process
 			add_to_process_chunk(proc_obj, rqst, offset);
@@ -888,7 +691,7 @@ int update_offset(UINT proc_id, ULONG offset, struct rqst_struct *rqst) {
 			//update the chunk id
 		chunk->offset = offset;
 #ifdef NV_DEBUG
-         fprintf(stderr,"update_offset %ld \n", chunk->offset);
+         fprintf(stderr,"update_offset %u \n", chunk->offset);
 #endif
         
 		}
@@ -923,6 +726,8 @@ int get_proc_num_maps(int pid) {
 }
 
 
+int process_fd = -1;
+
 static struct proc_obj * read_map_from_pmem(int pid) {
 
 	struct proc_obj *proc_obj = NULL;
@@ -939,18 +744,24 @@ static struct proc_obj * read_map_from_pmem(int pid) {
 
 	bytes = sizeof(struct proc_obj);
 
-	generate_file_name((char *) MAPMETADATA_PATH, pid, file_name);
 
-	fd = open(file_name, O_RDWR);
+	 if ( process_fd == -1) {  
+
+		generate_file_name((char *) MAPMETADATA_PATH, pid, file_name);
+
+		fd = open(file_name, O_RDWR);
 
 #ifdef NV_DEBUG
-     fprintf(stderr, "entering nv_map_read %s\n",file_name);
+	     fprintf(stderr, "entering nv_map_read %s\n",file_name);
 #endif
 
-	if (fd == -1) {
-		perror("Error opening file for reading");
-		return NULL;
+		if (fd == -1) {
+			perror("Error opening file for reading");
+			return NULL;
+		}
+		process_fd = fd;
 	}
+	fd = process_fd;
 
 
 	map = (struct proc_obj *) mmap(0, METADATA_MAP_SIZE,
@@ -962,7 +773,9 @@ static struct proc_obj * read_map_from_pmem(int pid) {
 		perror("Error mmapping the file");
 		return NULL;
 	}
+#ifdef NV_DEBUG
 	 fprintf(stderr, "proc_obj->num_chunks %d \n", proc_obj->num_chunks);
+#endif
 
 	bytes = sizeof(struct proc_obj);
 	//Start reading the chunks
@@ -995,15 +808,16 @@ static struct proc_obj * read_map_from_pmem(int pid) {
 	//Read all the chunksa
 	for (idx = 0; idx < proc_obj->num_chunks; idx++) {
 		chunk = (struct chunk*) addr;
-
-		 fprintf(stderr,"proc_obj->num_chunks % lu \n", proc_obj->num_chunks);
-
 #ifdef NV_DEBUG
+		 fprintf(stderr,"proc_obj->num_chunks %d\n", proc_obj->num_chunks);
          print_chunk(chunk);
 #endif
-
 		//Add chunks to process
 		add_chunk(chunk, proc_obj);
+
+	    //Set the heap addr to zero
+		//chunk->start_addr = 0;		
+
 		addr = addr + sizeof(struct chunk);
 	}
 
@@ -1012,48 +826,59 @@ static struct proc_obj * read_map_from_pmem(int pid) {
 
 
 void *map_read = NULL;
+int g_fd = -1;
 
 
 //This function just maps the address space corresponding
 //to process.
 void *map_process(struct rqst_struct *rqst) {
 
-  char file_name[256];
-  int fd = -1; 
-  void *nvmap = NULL;
-  char *deleteme;	
+	char file_name[256];
+	int fd = -1; 
+	void *nvmap = NULL;
 
-  bzero(file_name, 256);
-  //TODO: Find a way to convert process id  to  file
-  generate_file_name(FILEPATH, rqst->pid , file_name);
+	 if(g_fd > -1)
+		goto start_map;
 
-  fd = open(file_name, O_RDWR);
-  if (fd == -1) {
-      fprintf(stderr,"file_name %s\n",file_name);
-      perror("Error opening file for reading");
-      //exit(EXIT_FAILURE);
-     goto error;
-  }
-  if(fd == -1) {
-     fprintf(stderr,"cannot read map file \n");
-     goto error;
-  }
+	bzero(file_name, 256);
+	//TODO: Find a way to convert process id  to  file
+	 generate_file_name(FILEPATH, rqst->pid , file_name);
+
+	 fd = open(file_name, O_RDWR);
+	  if (fd == -1) {
+    	  fprintf(stderr,"file_name %s\n",file_name);
+	      perror("Error opening file for reading");
+    	  //exit(EXIT_FAILURE);
+	     goto error;
+	  }
+	  if(fd == -1) {
+    	 fprintf(stderr,"cannot read map file \n");
+	     goto error;
+	  }
+	  g_fd = fd;	
  
-  nvarg.chunk_id = rqst->mmap_id;
-  nvarg.fd = fd;
-  nvarg.proc_id = rqst->pid;
-  nvarg.pgoff = 0;
-  nvarg.pflags = 1;
-  nvarg.ref_count = 1;
 
-   //nvmap = mmap(0, NVRAM_DATASZ, PROT_NV_RW, MAP_PRIVATE, fd, 0);
-   nvmap  = (char *)syscall(__NR_nv_mmap_pgoff,0 ,NVRAM_DATASZ,  PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, &nvarg);
-   if (nvmap == MAP_FAILED) {
-       close(fd);
-       goto error;
-   }
+start_map:
 
-   return nvmap;
+	  nvarg.chunk_id = rqst->mmap_id;
+	  nvarg.fd = fd;
+	  nvarg.proc_id = rqst->pid;
+	  nvarg.pgoff = 0;
+	  nvarg.pflags = 1;
+	  nvarg.ref_count = 1;
+
+	   //nvmap = mmap(0, NVRAM_DATASZ, PROT_NV_RW, MAP_PRIVATE, fd, 0);
+		//nvmap =  nvread(rqst->pid, rqst->mmap_id, NVRAM_DATASZ);
+
+
+       nvmap = (char *) syscall(__NR_nv_mmap_pgoff, 0, NVRAM_DATASZ,  PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS , &nvarg );
+	   if (nvmap == MAP_FAILED) {
+    	   close(fd);
+	       goto error;
+	   }
+	   fprintf(stderr, "NVMAP %s %d \n", (char *)nvmap, rqst->pid);
+
+	   return nvmap;
 
 error:
     return NULL;
@@ -1061,7 +886,7 @@ error:
 
 void* nv_map_read(struct rqst_struct *rqst, void* map ) {
 
-    unsigned long offset = 0;
+    unsigned int offset = 0;
     int process_id = 1;
     struct proc_obj *proc_obj = NULL;
     unsigned int vma_id;
@@ -1095,27 +920,41 @@ void* nv_map_read(struct rqst_struct *rqst, void* map ) {
     if(!chunk_ptr) {
         fprintf(stderr, "finding chunk failed \n");
 		goto error;        
-    }
+    }	
 
-     if(chunk_ptr->proc_obj->start_addr == 0) {
-         chunk_ptr->proc_obj->start_addr = (unsigned long)map_read;
-     }
+#ifdef NV_DEBUG
+	fprintf(stderr, "nv_map_read: chunk offset: %u \n", chunk_ptr->offset);
+#endif
 
      rqst->mmap_id = chunk_ptr->mmap_id;
      rqst->id = chunk_ptr->vma_id;
      rqst->pid = chunk_ptr->proc_id;
 
-     map_read = map_process(rqst);
-     if(!map_read){
-    	 fprintf(stderr, "nv_map_read: map_process returned null \n");
-    	 goto error;
-     }
+	//If the chunk already has a heap address
+	//then add to the offset and return address
+	//This avoids system calls
+	/*if ( chunk_ptr->start_addr) {
+	
+		//fprintf(stderr,"nvread: returning from cached chunk addr \n");
+		goto addr_ret;
 
+	}else*/{
+	   map_read = map_process(rqst);
+       if(!map_read){
+     	 fprintf(stderr, "nv_map_read: map_process returned null \n");
+	   	 goto error;
+	   }
+		//During process initialization these values must be 0
+		//chunk_ptr->start_addr = (unsigned long)map_read;
+	}	
+
+//addr_ret:
      //Get the the start address and then end address of chunk
     offset = chunk_ptr->offset; /*Every malloc call will lead to a chunk creation*/
     rqst->mem = (unsigned long)((unsigned long)map_read + offset);
 #ifdef NV_DEBUG
-     fprintf(stderr, "nv_map_read: chunk offset %lu %lu %lu \n", offset, (unsigned long)map_read, rqst->mem);
+     fprintf(stderr, "nv_map_read: chunk offset %u %lu %lu %u \n", 
+					 offset, (unsigned long)map_read, rqst->mem, chunk_ptr->length);
 #endif
 
    return (void *)rqst->mem;

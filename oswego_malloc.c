@@ -535,10 +535,14 @@ MAX_RELEASE_CHECK_RATE   default: 4095 unless not HAVE_MMAP
 #include <sys/stat.h>
 #include <ctype.h>
 #include <limits.h>
-#include "nv_map.h"
+//#include "nvmalloc_wrap.h"
+//#include <sys/nacl_imc_api.h>
+//#include <sys/nacl_syscalls.h>
 
 //#define USE_BASIC_MMAP
-#define __NR_nv_mmap_pgoff     302
+#define __NR_nv_mmap_pgoff     301
+
+#define NO_NACL
 
 #define DATA_SIZE 1024*1024*100
 
@@ -846,6 +850,7 @@ extern "C" {
 #define dlnvrealloc              nv_realloc
 #define dlpnvmalloc              pnv_malloc
 #define dlpnvread              	 pnv_read
+#define dlnvcommit				 nv_commit
 /*#define dlmemalign             memalign
 #define dlposix_memalign       posix_memalign
 #define dlrealloc              realloc
@@ -3840,15 +3845,15 @@ static void internal_malloc_stats(mstate m) {
 */
 
 /* Malloc using mmap */
-static void* mmap_alloc(mstate m, size_t nb) {
+/*static void* mmap_alloc(mstate m, size_t nb) {
   size_t mmsize = mmap_align(nb + SIX_SIZE_T_SIZES + CHUNK_ALIGN_MASK);
   if (m->footprint_limit != 0) {
     size_t fp = m->footprint + mmsize;
     if (fp <= m->footprint || fp > m->footprint_limit)
       return 0;
   }
-  if (mmsize > nb) {     /* Check for wrap around 0 */
-    char* mm = (char*)(CALL_DIRECT_MMAP(mmsize));
+  if (mmsize > nb) {*/     /* Check for wrap around 0 */
+    /*char* mm = (char*)(CALL_DIRECT_MMAP(mmsize));
     if (mm != CMFAIL) {
       size_t offset = align_offset(chunk2mem(mm));
       size_t psize = mmsize - offset - MMAP_FOOT_PAD;
@@ -3869,7 +3874,7 @@ static void* mmap_alloc(mstate m, size_t nb) {
     }
   }
   return 0;
-}
+}*/
 
 /* Realloc using mmap */
 static mchunkptr mmap_resize(mstate m, mchunkptr oldp, size_t nb, int flags) {
@@ -4088,9 +4093,11 @@ void *use_nvmap(size_t s, struct rqst_struct *rqst){
 
      void *ptr = NULL;
 
+#ifdef NO_NACL
+
      if(!set_map_file) {
 
-    	devzero_fd = setup_nvmalloc_mapfile((char *)"/tmp/proc1", 1024*1024*1000);
+    	devzero_fd = setup_nvmalloc_mapfile((char *)"/tmp/proc1", 1024*1024*50);
 		set_map_file = 1;
      }
 
@@ -4098,12 +4105,15 @@ void *use_nvmap(size_t s, struct rqst_struct *rqst){
     	 fprintf(stderr, "setup_nvmalloc_mapfile failed \n");
     	 return CALL_MMAP(s);
      }
-     else {
+     else
+#endif
+	 {
         //ptr = CALL_MMAP(s);
         if( nvmap == NULL) {
 
-			//a.fd = devzero_fd;
-			a.fd = -1;
+#ifdef NO_NACL
+			a.fd = -1;//devzero_fd;
+#endif
 			a.pgoff = 0;
 	
 			if(rqst) {
@@ -4128,9 +4138,11 @@ void *use_nvmap(size_t s, struct rqst_struct *rqst){
 			a.ref_count = 1;
 
 #ifdef USE_BASIC_MMAP
-   	 		  nvmap = mmap(0, NVRAM_DATASZ, PROT_READ|PROT_WRITE, MAP_PRIVATE, devzero_fd, 0);
+   	 		  nvmap = mmap(0, NVRAM_DATASZ, PROT_READ|PROT_WRITE, MAP_SHARED, devzero_fd, 0);
 #else
-			  nvmap  = (char *)syscall(__NR_nv_mmap_pgoff,0 ,NVRAM_DATASZ,   PROT_READ|PROT_WRITE, MAP_ANONYMOUS| MAP_PRIVATE, &a);
+			  fprintf(stderr,"chunk id %d \n", a.chunk_id);
+			  nvmap  = (char *)syscall(__NR_nv_mmap_pgoff,0 ,NVRAM_DATASZ,  PROT_READ | PROT_WRITE, MAP_PRIVATE| MAP_ANONYMOUS, &a);
+			  //nvmap = (char *)nvmalloc(proc_id, chunk_id ,NVRAM_DATASZ, 1);
 #endif
 			  ptr = nvmap;
 			  nvoffset = 0;	
@@ -4141,17 +4153,17 @@ void *use_nvmap(size_t s, struct rqst_struct *rqst){
 		else {
 			ptr	= nvmap + nvoffset;
 		}
-     	if (ptr == MAP_FAILED) {
+       /* if (ptr == MAP_FAILED) {
         	close(devzero_fd);  
 	        perror("Error mmapping the file");
 			return NULL;
-        }
+        }*/
 		nvoffset = nvoffset + s;   
      }
 
 	 if(rqst) {
-	     rqst->mmap_straddr = nvmap;
-		 fprintf(stdout, "assing nvmap addr \n");
+	     rqst->mmap_straddr = (unsigned long)nvmap;
+		 //fprintf(stdout, "assing nvmap addr \n");
     	 rqst->mmap_id = chunk_id;
 	}	
 
@@ -4177,7 +4189,7 @@ int set_mmap_id(struct rqst_struct *rqst){
 
 int update_nvram_mdata(struct rqst_struct *rqst, void* mem){
 
-	unsigned long offset = 0;
+	unsigned int offset = 0;
 
 	if(!rqst){
 		fprintf(stderr,"nvram rqst null, update failed");
@@ -4196,11 +4208,12 @@ int update_nvram_mdata(struct rqst_struct *rqst, void* mem){
 	//FIXME: Not thread safe
     offset =  ((unsigned long)mem - mmap_startaddr);
     if(offset == 0){
-    	fprintf(stderr,"offset calc error %lu, %lu", mmap_startaddr, mem);
+    	fprintf(stderr,"offset calc error %lu, %lu", mmap_startaddr, (unsigned long)mem);
     	return -1;
     }
-
-	fprintf(stderr,"offset calc error %lu, %lu %d", mmap_startaddr, mem, offset);	
+#ifdef NV_DEBUG
+	fprintf(stderr,"offset calc error %lu, %lu %lu", mmap_startaddr, (unsigned long)mem, offset);	
+#endif
 
     if (update_offset(rqst->pid, offset, rqst)){
     	fprintf(stderr, "update offset failed \n");
@@ -4270,10 +4283,13 @@ static void* sys_alloc(mstate m, size_t nb, struct rqst_struct *rqst) {
   if (HAVE_MMAP && tbase == CMFAIL) { 
 
 	if(rqst) {
-
+#ifdef NV_DEBUG
 		fprintf(stderr,"IN sys_alloc rqst->pid %d \n",rqst->pid);
+#endif
 	}else{
+#ifdef NV_DEBUG
 		fprintf(stderr,"IN sys_alloc rqst is null \n");
+#endif
 	}
     char* mp = (char*)(use_nvmap(asize, rqst));
     if (mp != CMFAIL) {
@@ -4760,11 +4776,18 @@ void* dlpnvread(size_t bytes, struct rqst_struct *rqst) {
 
 }
 
+/*Method for commiting to persistent memory*/
+int dlnvcommit(struct rqst_struct *rqst) {
+
+	return nv_data_commit(rqst);
+
+}
+
 
 void* dlpnvmalloc(size_t bytes, struct rqst_struct *rqst) {
 
 
-	unsigned long offset = 0;
+	//unsigned long offset = 0;
 
 	////Mark a new allocation
 	//This will also create a new
@@ -4900,7 +4923,9 @@ void* dlpnvmalloc(size_t bytes, struct rqst_struct *rqst) {
     }
 
     mem = sys_alloc(gm, nb, rqst);
+#ifdef NV_DEBUG
     fprintf(stderr, "rqst->pid %d \n",rqst->pid);
+#endif
 
   postaction:
     POSTACTION(gm);
@@ -5048,7 +5073,7 @@ void* dlnvmalloc(size_t bytes) {
 
     mem = sys_alloc(gm, nb, NULL);
 
-	fprintf(stderr, "mem %lu mmap_straddr %lu offset %lu bytes %u\n", mem, mmap_startaddr, mem - mmap_startaddr, bytes );
+	fprintf(stderr, "mem %lu mmap_straddr %lu offset %lu bytes %u\n", (unsigned long)mem, mmap_startaddr, (unsigned long)mem - mmap_startaddr, bytes );
 
   postaction:
     POSTACTION(gm);
@@ -5171,12 +5196,13 @@ void dlfree(void* mem) {
 
 void* dlnvcalloc(size_t n_elements, size_t elem_size) {
   void* mem;
-  size_t req = 0;
+  //size_t req = 0;
   /*if (n_elements != 0) {
     req = n_elements * elem_size;
     if (((n_elements | elem_size) & ~(size_t)0xffff) &&
         (req / n_elements != elem_size))
-      req = MAX_SIZE_T; /* force downstream failure on overflow */
+      req = MAX_SIZE_T; */
+	/* force downstream failure on overflow */
  // }
   //mem = dlnvmalloc(req);
   //if ((mem != 0) && calloc_must_clear(mem2chunk(mem)))

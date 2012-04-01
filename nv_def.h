@@ -10,7 +10,7 @@
 //This denotes the size of persistem memory mapping
 // for each process. Note, the metadata mapping is a seperate
 //memory mapped file for each process currently
-#define METADATA_MAP_SIZE 1024 * 1024 
+#define METADATA_MAP_SIZE 1024 * 1024 *100
 
 
 #define PROT_NV_RW  PROT_READ|PROT_WRITE

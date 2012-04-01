@@ -157,7 +157,8 @@ void SetupLargeBenchmarks() {
 
 //  RegisterBenchmark(strdup("Spectralnorm"), run_spectralnorm, 5500, 150020779,
   //                  NULL, NULL);
-  RegisterBenchmark(strdup("Fasta"), run_fasta, 9000000, 51667385, NULL, NULL);
+  //RegisterBenchmark(strdup("Fasta"), run_fasta, 9000000, 51667385, NULL, NULL);
+  RegisterBenchmark(strdup("Fasta"), run_fasta, 20000000, 91667385, NULL, NULL);
   //RegisterBenchmark(strdup("Revcomp"), run_revcomp, 0, 23542857, NULL, NULL);
   //RegisterBenchmark(strdup("Binarytrees"), run_binarytrees, 18, 383306452,
   //                NULL, NULL);

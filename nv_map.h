@@ -15,8 +15,6 @@
 #include <stdio.h>
 #include <fcntl.h>
 #include <sys/types.h>
-#include <sys/ipc.h>
-#include <sys/shm.h>
 #include <string.h>
 #include <sys/stat.h>
 #include <sys/mman.h>
@@ -41,9 +39,17 @@ struct chunk {
 	unsigned int mmap_id;
 	unsigned long mmap_straddr;
 
+    //should be set to 0 
+	//during initialization 
+	unsigned long start_addr;
     unsigned int vma_id;
-    unsigned long length;
-    unsigned long offset;
+    unsigned int length;
+    unsigned int offset;
+
+	/*indicates if chunk is explicitly committed
+	by application*/
+	int isCommitted;
+
     struct proc_obj *proc_obj;
     struct list_head next_chunk;
     //chunk processing information
@@ -57,7 +63,7 @@ struct chunk {
     enum CHUNKFLGS flags; 
 #endif
 
-}chunk;
+};
 
 
 
@@ -144,7 +150,7 @@ struct queue {
     int list_initialized;
 };
 
-struct queue *l_queue;
+//struct queue *l_queue;
 //Function to read nv queue
 struct queue *get_queue(void);
 //Function to get next chunk from queue
@@ -179,7 +185,7 @@ void* nv_mmap(struct rqst_struct *);
 
 void* nv_map_read(struct rqst_struct *, void *);
 
-int nv_commit(struct rqst_struct *);
+int nv_data_commit(struct rqst_struct *);
 
 int nv_munmap(void *addr);
 
@@ -187,7 +193,7 @@ unsigned int generate_vmaid(const char *key);
 
 ULONG findoffset(UINT proc_id, ULONG curr_addr);
 
-int update_offset(UINT proc_id, ULONG offset, struct rqst_struct *rqst);
+int update_offset(UINT proc_id, unsigned int offset, struct rqst_struct *rqst);
 
 //Should be first called
 int initialize_nv(int sema);
@@ -195,10 +201,10 @@ int initialize_nv(int sema);
 /*Queue related changes */
 
 //first time initialization
-int intialized;
+//int intialized;
 
 //semaphore intialization
-int initialize_sema;
+//int initialize_sema;
 
 void *create_queue();
 
