@@ -51,7 +51,7 @@ int fasta_output_len;
 
 char *outptr = NULL;
 char *init_outptr = NULL;
-
+struct rqst_struct rqst;
 
 char *fasta_10k_ref_output12 = 
 ">ONE Homo sapiens alu\n"
@@ -1793,8 +1793,10 @@ repeat(const char *alu, const char *title, int n) {
 		memcpy(outptr, "\n", 1);
 	    outptr++;
         n -= bytes;
-    }
 
+    }
+	//confirm if commit failed
+	assert(pnvcommit(&rqst) == 0);
 }
 
 /*
@@ -1869,8 +1871,8 @@ randomize(struct amino_acid *amino_acid, int amino_acid_size,
 	memcpy ( outptr, line_buffer,  (j + 1) * 1);
     outptr = outptr + (j + 1) * 1;
 
-	//fprintf(stderr,"%s \n", outptr);
-
+	//confirm if commit failed
+	assert(pnvcommit(&rqst) == 0);
 }
 
 struct amino_acid amino_acid[] = {
@@ -1957,8 +1959,7 @@ char *arrayfile_join1 (FILE *pFile)  {
 
 int run_fasta(int n) {
 
-    struct rqst_struct rqst;
-	int output_len = 0;
+   	int output_len = 0;
 	int ret = 0;
 
     rqst.bytes = MAXSIZE;
