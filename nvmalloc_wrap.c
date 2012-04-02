@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "hash_map.h"
-
 #include <unistd.h>
 #include <errno.h>
 #include <sys/mman.h>
+#include "nvmalloc_wrap.h"
+#include "IOtimer.h"
+#include <sys/time.h>
 #include "oswego_malloc.h"
 
-//#define USE_NVMALLOC
 //#define USE_STATS
 
 
@@ -24,18 +25,14 @@ size_t print_total_stats() {
 
 	size_t total_alloc =0;
 
-	total_alloc= find_hash_total();
+	//total_alloc= find_hash_total();
 
+	fprintf(stderr,"NVmalloc: total %zu\n",total_alloc);
 	 return total_alloc;	
 
 }
 
-
-int input_id =0;
-int tid = 1;
 char *addr = NULL;
-size_t region_size = 65536 * 3000;
-int d = -1;
 size_t val = 0;
 size_t total_size = 0;
 
@@ -45,14 +42,13 @@ void *allocate_mem(size_t size) {
 
 	total_size += size;
 
-//#ifdef USE_NVMALLOC
-//	addr = (char *)nv_malloc(size);
-//#else
+#ifdef USE_NVMALLOC
 	addr = (char *)malloc(size);
-//#endif
+#else
+	addr = (char *)malloc(size);
+#endif
 
 #ifdef USE_STATS
-	//fprintf(stderr,"%d %zu\n", ++input_id, total_size );
     if(!addr){
         fprintf(stderr,"NVmalloc allocation failed \n");
         return NULL;
@@ -63,9 +59,12 @@ void *allocate_mem(size_t size) {
     return addr;
 }
 
+
 void *pnvmalloc(size_t size, struct rqst_struct *rqst) {
 
     int flgPersist = 0;
+	struct timeval start, end;
+	long total_time; 	
 
 	if(!rqst) {
 		perror("failed pnvmalloc \n");
@@ -73,10 +72,41 @@ void *pnvmalloc(size_t size, struct rqst_struct *rqst) {
 	}
 
 #ifdef USE_NVMALLOC
+
+    gettimeofday(&start, NULL);	
+
 	addr = (char *)pnv_malloc(size, rqst);
-#else
-	addr = (char *)malloc(size);
+
+    gettimeofday(&end, NULL);
+
+#ifdef DEBUG
+	total_time =  simulation_time( start, end );
+
+	fprintf(stderr, "pnv_malloc time %ld \n", total_time);
 #endif
+
+//#endif
+
+#else
+
+	addr = (char *)malloc(size);
+
+#ifdef USE_STATS
+	
+	gettimeofday(&start, NULL);	
+
+	addr = (char *)malloc(size);
+
+	 gettimeofday(&end, NULL);
+
+	total_time =  simulation_time( start, end );
+
+	fprintf(stderr, "malloc time %ld \n", total_time);
+
+#endif
+
+#endif
+
 
 #ifdef USE_STATS
     if(!addr){
@@ -99,13 +129,13 @@ void *pnvread(size_t size, struct rqst_struct *rqst) {
 	}
 
 #ifdef USE_NVMALLOC
+
 	addr = (char *)pnv_read(size, rqst);
 #else
 	addr = (char *)malloc(size);
 #endif
 
 #ifdef USE_STATS
-	//fprintf(stderr,"%d %zu\n", ++input_id, total_size );
     if(!addr){
         fprintf(stderr,"NVmalloc allocation failed \n");
         return NULL;
@@ -124,12 +154,15 @@ void *nvcalloc(size_t nelemnts, size_t elemnt_sz) {
     int flgPersist = 0;
 
 	total_size += nelemnts* elemnt_sz;
-    ++input_id;
+    //++input_id;
+
+	//fprintf(stderr,"%zu\n",total_size );
+	//addr = nv_malloc(size);
 
 #ifdef USE_NVMALLOC    
-	addr = (char *)nv_calloc(nelemnts, elemnt_sz);
+	//addr = (char *)nv_calloc(nelemnts, elemnt_sz);
 #else
-	addr = calloc(nelemnts, elemnt_sz);
+	addr = (char *)calloc(nelemnts, elemnt_sz);
 #endif
 
     if(!addr){
@@ -189,10 +222,11 @@ void nv_free(void *addr) {
 #ifdef USE_NVMALLOC
 	//nvfree(addr);
 #else
-	free(addr);
+//	free(addr);
 #endif
 }
 
+int pnvcommit(struct rqst_struct *rqst) {
 
-
-
+	return nv_commit(rqst);
+}

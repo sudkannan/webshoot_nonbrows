@@ -12,10 +12,10 @@
 #define NUMINTS  (90)
 #define FILESIZE (NUMINTS * sizeof(int))
 
-#define __NR_nv_mmap_pgoff     302 
+#define __NR_nv_mmap_pgoff     301 
 
-#define MAP_SIZE 4096 
-#define SEEK_BYTES 1024 * 1024 * 5
+#define MAP_SIZE 203333411 
+#define SEEK_BYTES 1024*1024*1024
 
 #define INVALID_INPUT -2;
 
@@ -145,7 +145,7 @@ int main(int argc, char *argv[])
 
 	 printf("going to mmap readd \n");
 
-	map_read = (char *) syscall(__NR_nv_mmap_pgoff, 0, MAP_SIZE,  PROT_READ|PROT_WRITE, MAP_PRIVATE, &a );
+	map_read = (char *) syscall(__NR_nv_mmap_pgoff, 0, MAP_SIZE,  PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, &a );
 	//map_read = (char *)mmap( 0, MAP_SIZE,  PROT_READ | PROT_WRITE, MAP_PRIVATE, fd, 0);
     if (map_read == MAP_FAILED) {
 	    close(fd);
@@ -156,6 +156,9 @@ int main(int argc, char *argv[])
 	//fprintf(stdout, "\n\n\n\n");
 
 	//fprintf(stdout, "%s \n", map_read);
+
+	i = 100 * 1024 * 1024;
+
 
 	 while ( i < MAP_SIZE) {
 

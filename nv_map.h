@@ -126,12 +126,12 @@ struct rqst_struct {
 };
 
 struct nvmap_arg_struct{
+
     unsigned long fd;
-	unsigned long pgoff;
+    unsigned long offset;
     int chunk_id;
     int proc_id;
-	int pflags;
-	int ref_count;
+    int pflags;
 };
 
 struct queue {

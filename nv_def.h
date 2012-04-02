@@ -12,9 +12,7 @@
 //memory mapped file for each process currently
 #define METADATA_MAP_SIZE 1024 * 1024 *100
 
-
 #define PROT_NV_RW  PROT_READ|PROT_WRITE
-
 
 //base name of memory mapped files
 #define FILEPATH "/tmp/chkpt"
@@ -26,11 +24,11 @@
 //Page size
 #define SHMSZ  100*1024 * 1024 
 
-
 //NVRAM changes
 #define NUMINTS  (10)
 #define FILESIZE (NUMINTS * sizeof(int))
-#define __NR_nv_mmap_pgoff     302
+#define __NR_nv_mmap_pgoff     301
+#define __NR_nv_commit         303
 #define __NR_mmap 192
 
 //FIXME: UNUSED FLAG REMOVE
@@ -44,7 +42,6 @@
 
 #define MAX_DATA_SIZE 1024 * 1024 *1524
 
-#define NVRAM_DATASZ 1024 * 1024 *  100
 
 //Maximum number of process this library
 //supports. If you want more proecess

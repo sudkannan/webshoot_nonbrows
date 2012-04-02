@@ -62,7 +62,9 @@ clean:
 	rm -rf *.a
 	rm -rf *.so
 	rm -rf *.so.*
-	 sudo rm -rf /usr/lib/liboswego*
+	sudo rm -rf /usr/lib/liboswego*
+	rm -f mmap_read_multi_page_test
+	rm -f bench-framework_file
 
 
 

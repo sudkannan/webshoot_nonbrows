@@ -4114,7 +4114,6 @@ void *use_nvmap(size_t s, struct rqst_struct *rqst){
 #ifdef NO_NACL
 			a.fd = -1;//devzero_fd;
 #endif
-			a.pgoff = 0;
 	
 			if(rqst) {
 	
@@ -4135,13 +4134,12 @@ void *use_nvmap(size_t s, struct rqst_struct *rqst){
 			}
 
 			a.pflags = 1;
-			a.ref_count = 1;
 
 #ifdef USE_BASIC_MMAP
-   	 		  nvmap = mmap(0, NVRAM_DATASZ, PROT_READ|PROT_WRITE, MAP_SHARED, devzero_fd, 0);
+   	 		  nvmap = mmap(0, MAX_DATA_SIZE, PROT_READ|PROT_WRITE, MAP_PRIVATE| MAP_ANONYMOUS, devzero_fd, 0);
 #else
 			  fprintf(stderr,"chunk id %d \n", a.chunk_id);
-			  nvmap  = (char *)syscall(__NR_nv_mmap_pgoff,0 ,NVRAM_DATASZ,  PROT_READ | PROT_WRITE, MAP_PRIVATE| MAP_ANONYMOUS, &a);
+			  nvmap  = (char *)syscall(__NR_nv_mmap_pgoff,0 ,MAX_DATA_SIZE,  PROT_READ | PROT_WRITE, MAP_PRIVATE| MAP_ANONYMOUS, &a);
 			  //nvmap = (char *)nvmalloc(proc_id, chunk_id ,NVRAM_DATASZ, 1);
 #endif
 			  ptr = nvmap;

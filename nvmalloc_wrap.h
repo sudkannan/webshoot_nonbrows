@@ -8,11 +8,28 @@
 extern "C" {
 #endif
 
-#define PROC_ID 994
+#define PROC_ID 4028
 #define CHUNK_ID 1
-#define MAXSIZE 200* 1024 * 1024
+#define MAXSIZE 500 * 1024 * 1024
 
-#define FASTA_DELETE_ME
+#define USE_NVMALLOC
+//#define ALLOCATE
+//#define FASTA_DELETE_ME
+
+#define USE_BENCHMARKING
+
+#define OUTFILE "fasta_output"
+#define REV_INFILE "fasta_output"
+#define REV_OUTFILE "revcomp_output"
+#define KNUCLEO_INFILE "fasta_output"
+
+//#define OUTFILE "/tmp/ramsud/fasta_output"
+//#define REV_INFILE "/tmp/ramsud/fasta_output"
+//#define REV_OUTFILE "/tmp/ramsud/revcomp_output"
+
+//#define OUTFILE "/mnt/fasta_output"
+//#define REV_INFILE "/mnt/fasta_output"
+//#define REV_OUTFILE "/mnt/revcomp_output"
 
 struct rqst_struct {
     size_t bytes;
@@ -33,15 +50,38 @@ struct rqst_struct {
     unsigned long mmap_straddr;
 };
 
+struct nvmap_arg_struct{
+
+    unsigned long fd;
+    unsigned long offset;
+    int chunk_id;
+    int proc_id;
+    int pflags;
+};
+
+
 
 void *allocate_mem(size_t size);
+void* allocate_nvmem(size_t mapsize);
 void nv_free(void *ptr);
 size_t print_total_stats();
 void *nvrealloc(void *, size_t);
 void *pnvmalloc(size_t size, struct rqst_struct *rqst);
 void *pnvread(size_t bytes, struct rqst_struct *rqst);
+int  pnvcommit(struct rqst_struct *rqst);
 #ifdef __cplusplus
-};
+}
+
+/* Wrapper to check for errors */
+#define CHECK_ERR(a)                                       \
+   if ((a))                                                  \
+   {                                                         \
+      perror("Error at line\n\t" #a "\nSystem Msg");         \
+      exit(1);                                               \
+   }
+
+
+
 #endif
 
 

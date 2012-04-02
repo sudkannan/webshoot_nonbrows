@@ -8,16 +8,13 @@
 #include "nv_map.h"
 #include "list.h"
 #include <sys/mman.h>
-//Native client does not have strings.h
-//#include <strings.h>
 #include <time.h>
 #include "nv_def.h"
 #include <inttypes.h>
+#include <assert.h>
 //#include <sys/nacl_imc_api.h>
 //#include <sys/nacl_syscalls.h>
 
-
-//#define NV_DEBUG
 int dummy_var = 0;
 //static int vma_id;
 /*List containing all project id's */
@@ -28,13 +25,10 @@ int proc_list_init = 0;
 static int proc_map;
 unsigned long proc_map_start;
 int g_file_desc_nv = -1;
-//void *map = NULL;
-//unsigned long tot_bytes =0 ;
 struct nvmap_arg_struct nvarg;
 
 
 static struct proc_obj * read_map_from_pmem(int pid);
-
 static char* generate_file_name(char *base_name, int pid, char *dest) {
 
  int len = strlen(base_name);
@@ -44,7 +38,6 @@ static char* generate_file_name(char *base_name, int pid, char *dest) {
  memcpy(dest,base_name, len);
  len++;
  strcat(dest, c_pid);
- //fprintf(stderr, "generated file name %s \n", dest);
  return dest;
 }
 
@@ -55,23 +48,15 @@ static struct chunk* create_chunk_obj(struct rqst_struct *rqst, unsigned long cu
 	unsigned long addr = 0;
 
 	addr = proc_map_start;
+
 	//Meta offset indicates offset with respect to metadata
 	addr = addr + proc_obj->meta_offset;
-#ifdef NV_DEBUG
-	//fprintf(stderr, "addr %lu  sizeof(chunk) %u proc_obj->meta_offset %u \n", addr, sizeof(struct chunk), proc_obj->meta_offset);
-#endif
+
 	chunk = (struct chunk*) addr;
 	proc_obj->meta_offset += sizeof(struct chunk);
 
-	if(chunk == NULL) {
-		fprintf(stderr,"chunk creation failed\n");
-		return NULL;
-	}
-
-	if(rqst == NULL) {
-        fprintf(stderr,"chunk creation failed\n");
-        return NULL;
-    }
+	assert(chunk != NULL); 
+	assert(rqst != NULL); 
 
 	chunk->vma_id =  rqst->id;
 	chunk->length = rqst->bytes;
@@ -84,9 +69,10 @@ static struct chunk* create_chunk_obj(struct rqst_struct *rqst, unsigned long cu
 #endif
 
 #ifdef NV_DEBUG
-	//fprintf(stderr, "Setting offset chunk->vma_id %u to %u  %u\n",chunk->vma_id, chunk->offset, proc_obj->meta_offset);
+	fprintf(stderr, "Setting offset chunk->vma_id %u to %u  %u\n",
+				chunk->vma_id, chunk->offset, proc_obj->meta_offset);
 #endif
-	//current offset of process
+
 	return chunk;
 }
 
@@ -145,8 +131,6 @@ unsigned int generate_vmaid(const char *key) {
 }
 
 
-
-
 /*Function to return the process object to which chunk belongs
 @ chunk: process to which the chunk belongs
 @ return: process object 
@@ -177,7 +161,7 @@ struct chunk* find_chunk(unsigned int vma_id, struct proc_obj *proc_obj ) {
 #endif
 
 	if(!proc_obj) {
-		fprintf(stderr, "could not identify project id \n");
+		fprintf(stderr, "could not identify project id\n");
 		return NULL;
 	}
 
@@ -577,7 +561,7 @@ int nv_data_commit(struct rqst_struct *rqst) {
  
 	struct chunk *chunk = find_chunk(vma_id, proc_obj); 
 	if(!chunk) {
-		printf("nv_commit:finding chunk failed \n");
+		printf("nv_commit:finding chunk failed %d\n", pid);
 		goto error;
 	}
 
@@ -588,19 +572,15 @@ int nv_data_commit(struct rqst_struct *rqst) {
 	and flush it*/
 	wr_addr = (unsigned long)rqst->mem;
     size = rqst->bytes;
-
 	addr = wr_addr;
-	//imc_nvram_obj_create(addr, addr);
-#ifdef NV_DEBUG
-	fprintf(stdout,"nv_map.c:before calling nvcommit \n");
-#endif
-    //result = nvcommit(addr, size);
-	
+
+    result =  result = syscall(__NR_nv_commit, (unsigned long)addr, size);
+	//nvcommit(addr, size);
+
     if(result) {
 		fprintf(stdout,"nv_map.c:flush result %d \n",result);
 		return -1;
     }
-
 
 	return result;
 
@@ -859,20 +839,19 @@ void *map_process(struct rqst_struct *rqst) {
  
 
 start_map:
-
-	  nvarg.chunk_id = rqst->mmap_id;
 	  nvarg.fd = fd;
-	  nvarg.proc_id = rqst->pid;
-	  nvarg.pgoff = 0;
-	  nvarg.pflags = 1;
-	  nvarg.ref_count = 1;
+      nvarg.offset = 0;
+      nvarg.chunk_id =rqst->mmap_id;
+      nvarg.proc_id = rqst->pid;
+      nvarg.pflags = 1;
 
 	   //nvmap = mmap(0, NVRAM_DATASZ, PROT_NV_RW, MAP_PRIVATE, fd, 0);
 		//nvmap =  nvread(rqst->pid, rqst->mmap_id, NVRAM_DATASZ);
 
 
-       nvmap = (char *) syscall(__NR_nv_mmap_pgoff, 0, NVRAM_DATASZ,  PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS , &nvarg );
+       nvmap = (char *) syscall(__NR_nv_mmap_pgoff, 0, rqst->bytes,  PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS , &nvarg );
 	   if (nvmap == MAP_FAILED) {
+		   perror("map failed \n");
     	   close(fd);
 	       goto error;
 	   }
