@@ -202,6 +202,8 @@ read_stdin(int *stdin_size) {
         if (len == 0 || result[read] == '>') {
             break;
         }
+
+		//fprintf(stdout, "%s \n", result + read);
         read += len;
         if (result[read - 1] == '\n') {
             read--;

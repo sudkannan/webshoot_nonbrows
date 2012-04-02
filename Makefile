@@ -3,9 +3,9 @@ all: lib benchmark64
 LIBPATH=-L"/home/hendrix/browser_startup_time_ln/nonbrowser_mode"
 
 
-benchmark64: benchstringio.o IOtimer.o fasta_10k_ref_output.o hash_map.o nv_map.o oswego_malloc.o nvmalloc_wrap.o fasta_nvram.o revcomp_nvram.o knucleotide_file.o procstat.o richards.o
+benchmark64: benchstringio.o IOtimer.o fasta_10k_ref_output.o hash_map.o nv_map.o oswego_malloc.o nvmalloc_wrap.o fasta_nvram.o revcomp_nvram.o knucleotide_nvram.o procstat.o richards.o
 	g++ -g bench-framework.c -o bench-framework IOtimer.o benchstringio.o fasta_10k_ref_output.o hash_map.o nv_map.o nvmalloc_wrap.o fasta_nvram.o  \
-	revcomp_nvram.o knucleotide_file.o procstat.o richards.o ${LIBPATH}  -loswego  -lm -lpthread
+	revcomp_nvram.o knucleotide_nvram.o procstat.o richards.o ${LIBPATH}  -loswego  -lm -lpthread
 
 IOtimer.o:IOtimer.c
 	gcc -c -g IOtimer.c
@@ -24,6 +24,10 @@ nvmalloc_wrap.o: nvmalloc_wrap.c
 
 revcomp_nvram.o: revcomp_nvram.c
 	gcc -c -g revcomp_nvram.c -std=gnu99 -lpthread
+
+knucleotide_nvram.o: knucleotide_nvram.c
+	gcc -c -g knucleotide_nvram.c -std=gnu99 -lpthread
+
 
 procstat.o: procstat.c
 	gcc -c -g procstat.c -std=gnu99 
@@ -58,8 +62,6 @@ clean:
 	rm -rf *.a
 	rm -rf *.so
 	rm -rf *.so.*
-	rm -rf fasta_output
-	rm -rf revcomp_output	
 	 sudo rm -rf /usr/lib/liboswego*
 
 
